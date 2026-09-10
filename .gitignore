@@ -1,0 +1,13 @@
+# Local environments
+venv/
+.venv/
+
+# Datasets and generated artifacts
+indonesian_dev/
+processed/
+eda_cache/
+Jember Javanese Spontaneous Speech Corpus/
+
+# Notebook and OS-generated files
+.ipynb_checkpoints/
+.DS_Store
