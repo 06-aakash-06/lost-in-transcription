@@ -1,4 +1,7 @@
-# Preprocess.md — Preprocessing pipeline, rationale, research basis, and validation
+# Preprocess.md — Notebook v1 preprocessing pipeline, rationale, research basis, and validation
+
+> This file records the original notebook-derived `processed/v1` experiment. The reusable,
+> hardened builder is documented in [IMPLEMENTATION.md](IMPLEMENTATION.md) and writes `processed/v2`.
 
 This document covers Steps 4–7 of the pipeline build: the current best-practice research that
 informed design choices, the pipeline itself (implemented in `Main2.ipynb` §35–§41, "Part 4"),
@@ -48,7 +51,7 @@ result. Config values are in `CFG` (`Main2.ipynb` §37, also written to `manifes
 `normalize_training_text()` (kept entirely separate from `wer_norm`, which is byte-identical to the
 official scorer and is never touched):
 
-1. Unicode punctuation → ASCII (`" " → "`, `' ' → '`, `… → ...`, en/em dash → `-`) — must run before
+1. Unicode punctuation → ASCII (`“ ” → "`, `‘ ’ → '`, `… → ...`, en dash → `-`, em dash → space`) — must run before
    diacritic stripping. Addresses **R10**: `wer_norm` cannot handle the 80 Unicode punctuation
    characters (`"`×29, `"`×28, `'`×19, `…`×4) actually present in Jember (§26).
 2. Strip combining marks (Unicode NFD, drop category `Mn`) — removes `ê è ě` and the retroflex `ḍ`.

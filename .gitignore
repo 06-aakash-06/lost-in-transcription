@@ -1,6 +1,8 @@
 # Local environments
 venv/
 .venv/
+__pycache__/
+.pytest_cache/
 
 # Datasets and generated artifacts
 indonesian_dev/
