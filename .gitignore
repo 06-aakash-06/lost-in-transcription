@@ -13,3 +13,8 @@ Jember Javanese Spontaneous Speech Corpus/
 # Notebook and OS-generated files
 .ipynb_checkpoints/
 .DS_Store
+
+# Submission weights and local benchmark outputs
+submission_src/models/
+experiments/
+submission.zip

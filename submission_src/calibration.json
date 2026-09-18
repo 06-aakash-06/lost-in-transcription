@@ -1,0 +1,11 @@
+{
+  "selection": "weighted_medoid",
+  "use_quality": false,
+  "priors": {
+    "whisper_base_id": 0.6666666666666666,
+    "qwen_id": 1.0,
+    "xlsr_mixed_id_jv_lm": 1.0
+  },
+  "language_multipliers": {},
+  "fit_reference": "processed/v2/heldout_jember.tsv"
+}
