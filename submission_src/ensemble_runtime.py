@@ -529,7 +529,12 @@ class TransformersCTCBackend:
             from pyctcdecode import build_ctcdecoder
 
             labels = self._labels()
-            return build_ctcdecoder(labels, kenlm_model_path=str(lm_path))
+            return build_ctcdecoder(
+                labels,
+                kenlm_model_path=str(lm_path),
+                alpha=self.lm_alpha,
+                beta=self.lm_beta,
+            )
         except Exception:
             # A missing optional KenLM native binding should not prevent the
             # model from running with processor/argmax decoding.
@@ -592,11 +597,9 @@ class TransformersCTCBackend:
             logits = self.model(**model_inputs).logits[0]
         logits_array = logits.detach().float().cpu().numpy()
         if self.decoder is not None:
-            text = self.decoder.decode(
-                logits_array,
-                alpha=self.lm_alpha,
-                beta=self.lm_beta,
-            )
+            # BeamSearchDecoderCTC stores alpha/beta in the decoder.  Passing
+            # them here is incompatible with the official pyctcdecode API.
+            text = self.decoder.decode(logits_array)
         else:
             ids = np.argmax(logits_array, axis=-1).tolist()
             text = self.processor.batch_decode([ids], skip_special_tokens=True)[0]
