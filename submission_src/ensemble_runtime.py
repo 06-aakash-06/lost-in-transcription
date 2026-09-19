@@ -467,6 +467,7 @@ class TransformersCTCBackend:
         self.torch = torch
         self.device = self._resolve_device(device, torch)
         dtype = torch.float16 if self.device.type == "cuda" else torch.float32
+        self.model_dtype = dtype
         try:
             self.processor = AutoProcessor.from_pretrained(
                 str(model_path), local_files_only=True
@@ -576,10 +577,17 @@ class TransformersCTCBackend:
             return_tensors="pt",
             padding=True,
         )
-        model_inputs = {
-            key: value.to(self.device) if hasattr(value, "to") else value
-            for key, value in inputs.items()
-        }
+        model_inputs = {}
+        for key, value in inputs.items():
+            if hasattr(value, "to"):
+                value = value.to(self.device)
+                # The processor emits floating-point audio features as FP32,
+                # while the CUDA checkpoint is loaded in FP16.  Cast only
+                # floating tensors; attention masks and other integer inputs
+                # must retain their original dtype.
+                if hasattr(value, "is_floating_point") and value.is_floating_point():
+                    value = value.to(dtype=self.model_dtype)
+            model_inputs[key] = value
         with self.torch.inference_mode():
             logits = self.model(**model_inputs).logits[0]
         logits_array = logits.detach().float().cpu().numpy()
