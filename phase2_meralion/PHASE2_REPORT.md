@@ -68,4 +68,4 @@ Local generation uses MPS; CUDA is preferred automatically when available. CUDA/
 
 Public model source and downloaded licence are recorded in `MODEL_NOTICES.md`; preserve the licence and attribution in Phase 3 packaging.
 
-Measured adapted OOF generation cost (includes loading and equivalence checks): `{"device": "mps", "batch_size": 1, "clips": 372, "elapsed_seconds": 1983.2589107080003, "clips_per_second": 0.18757006359154607, "projected_2118_clip_seconds_mps": 11291.78057225684, "cuda_a100_measured": false}`. The MPS projection is not an A100 runtime estimate. Phase 3 must benchmark CUDA batching before committing its final archive.
+Measured adapted OOF generation cost (includes loading and equivalence checks): `{"device": "mps", "batch_size": 1, "clips": 372, "elapsed_seconds": 1983.2589107080003, "clips_per_second": 0.18757006359154607, "projected_2118_clip_seconds_mps": 11291.78057225684, "cuda_a100_measured": false}`. The MPS projection is not an A100 runtime estimate. Phase 3 built and locally tested both candidate archives; A100 runtime is still unmeasured. See `../phase3_protected_fusion/PHASE3_REPORT.md`.

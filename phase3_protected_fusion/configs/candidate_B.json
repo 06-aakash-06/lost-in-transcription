@@ -1,0 +1,13 @@
+{
+  "cuda_batch_size": 8,
+  "third_model": "whisper_full",
+  "fusion": {
+    "mode": "hybrid",
+    "threshold": 0.65,
+    "max_span": 3,
+    "confidence_span": 2,
+    "context": 1,
+    "collapse_anchor": true,
+    "operations": ["substitution", "insertion", "deletion"]
+  }
+}
