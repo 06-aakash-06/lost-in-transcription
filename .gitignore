@@ -13,3 +13,29 @@ Jember Javanese Spontaneous Speech Corpus/
 # Notebook and OS-generated files
 .ipynb_checkpoints/
 .DS_Store
+
+# Submission weights and local benchmark outputs
+submission_src/models/
+experiments/
+submission.zip
+artifacts/phase1_whisper_anchor_submission.zip*
+
+# Competition data, clip-level manifests/predictions, checkpoints and caches.
+# Aggregate findings and code are documented in the phase reports.
+phase1_whisper_anchor/data/*.tsv
+phase1_whisper_anchor/runs/
+phase1_whisper_anchor/models/
+phase1_whisper_anchor/results/
+phase2_meralion/cache/
+phase2_meralion/runs/
+phase2_meralion/models/
+phase2_meralion/results/
+phase3_protected_fusion/models/
+phase3_protected_fusion/results/
+
+# Submission bundles are reproducible locally but too large for GitHub Git.
+artifacts/*.zip
+artifacts/*.zip.sha256
+submission_candidate*.zip
+submission_metadata_blind_candidate.zip
+submission_timeout_fixed_candidate.zip
