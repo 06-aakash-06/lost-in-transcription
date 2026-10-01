@@ -1,11 +1,56 @@
 {
   "selection": "weighted_medoid",
+  "selection_by_language": {
+    "javind": "rover",
+    "ind": "rover"
+  },
+  "rover": {
+    "candidate_names": [
+      "meralion_sea",
+      "buzz_javanese",
+      "whisper_turbo_jw",
+      "qwen_id"
+    ],
+    "order": [
+      "meralion_sea",
+      "buzz_javanese",
+      "whisper_turbo_jw",
+      "qwen_id",
+      "whisper_large_id"
+    ],
+    "blank_factor": 1.25
+  },
+  "rover_by_language": {
+    "ind": {
+      "candidate_names": [
+        "qwen_id",
+        "meralion_sea",
+        "whisper_large_id"
+      ],
+      "order": [
+        "qwen_id",
+        "meralion_sea",
+        "whisper_large_id"
+      ],
+      "blank_factor": 1.25
+    }
+  },
   "use_quality": false,
   "priors": {
-    "whisper_base_id": 0.6666666666666666,
     "qwen_id": 1.0,
-    "xlsr_mixed_id_jv_lm": 1.0
+    "whisper_turbo_jw": 1.0,
+    "buzz_javanese": 1.0,
+    "meralion_sea": 1.0,
+    "whisper_turbo_id": 1.0,
+    "whisper_large_id": 1.0
   },
-  "language_multipliers": {},
-  "fit_reference": "processed/v2/heldout_jember.tsv"
+  "language_multipliers": {
+    "javind": {
+      "buzz_javanese": 0.5
+    },
+    "jav": {
+      "buzz_javanese": 1.5
+    }
+  },
+  "fit_reference": "target-like labelled dev slice; no test transcripts; ROVER order and weights calibrated on dev"
 }

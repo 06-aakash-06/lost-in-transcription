@@ -38,7 +38,10 @@ def _read_table(path: Path) -> list[dict[str, str]]:
 
 
 def _id(row: Mapping[str, str]) -> str:
-    for key in ("audio_filename", "clip_id"):
+    # Reference manifests can contain both columns while the prediction
+    # helpers intentionally emit clip_id.  Prefer the stable clip identifier
+    # whenever it is present so those tables align without renaming columns.
+    for key in ("clip_id", "audio_filename"):
         if row.get(key):
             return str(row[key])
     raise ValueError("table row needs audio_filename or clip_id")

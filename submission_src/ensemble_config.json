@@ -3,13 +3,76 @@
   "compute_type": "float16",
   "cpu_threads": 8,
   "num_workers": 1,
+  "inference_batch_size": 16,
+  "qwen_batch_size": 16,
+  "meralion_batch_size": 8,
+  "route_language": "javind",
   "calibration_file": "calibration.json",
+  "audio_preprocessing": {
+    "default_profile": "model_raw",
+    "profiles": {
+      "model_raw": {
+        "enabled": true,
+        "sample_rate": 16000,
+        "edge_trim": false,
+        "loudness_normalize": false
+      },
+      "qwen_norm": {
+        "enabled": true,
+        "sample_rate": 16000,
+        "edge_trim": false,
+        "loudness_normalize": true,
+        "target_rms_dbfs": -23.0,
+        "peak_ceiling_dbfs": -1.0
+      }
+    }
+  },
   "decodes": [
     {
-      "name": "whisper_base_id",
+      "name": "qwen_id",
+      "backend": "qwen_asr",
+      "model": "models/qwen3_asr_1_7b",
+      "language": "id",
+      "manifest_languages": ["ind", "javind"],
+      "preprocess_profile": "qwen_norm",
+      "max_new_tokens": 256,
+      "prior": 1.0,
+      "enabled": true
+    },
+    {
+      "name": "meralion_sea",
+      "backend": "meralion_asr",
+      "model": "models/meralion3_asr",
+      "language": null,
+      "manifest_languages": ["ind", "javind"],
+      "preprocess_profile": "model_raw",
+      "no_repeat_ngram_size": 6,
+      "repetition_penalty": 1.05,
+      "max_new_tokens": 256,
+      "prior": 1.0,
+      "enabled": true
+    },
+    {
+      "name": "whisper_turbo_jw",
+      "backend": "transformers_whisper",
+      "model": "models/whisper_large_v3_turbo",
+      "language": "jw",
+      "manifest_languages": ["jav", "javind"],
+      "preprocess_profile": "model_raw",
+      "beam_size": 5,
+      "max_new_tokens": 256,
+      "padding_mode": "max_length",
+      "long_form": false,
+      "prior": 1.0,
+      "enabled": true
+    },
+    {
+      "name": "whisper_large_id",
       "backend": "faster_whisper",
       "model": "models/whisper_large_v3",
       "language": "id",
+      "manifest_languages": ["ind"],
+      "preprocess_profile": "model_raw",
       "beam_size": 5,
       "temperature": 0.0,
       "vad_filter": false,
@@ -17,27 +80,28 @@
       "max_new_tokens": 256,
       "prior": 1.0,
       "enabled": true
-    },
-    {
-      "name": "xlsr_mixed_id_jv_lm",
-      "backend": "transformers_ctc",
-      "model": "models/multilingual_xlsr_300m_5gram",
-      "language": null,
-      "use_language_model": true,
-      "lm_alpha": 0.5,
-      "lm_beta": 1.5,
-      "prior": 1.0,
-      "enabled": true
-    },
-    {
-      "name": "qwen_id",
-      "backend": "qwen_asr",
-      "model": "models/qwen3_asr_1_7b",
-      "language": "id",
-      "max_new_tokens": 256,
-      "prior": 1.0,
-      "enabled": true
     }
   ],
-  "adaptive_decodes": []
+  "adaptive_trigger": {
+    "min_disagreement": 0.20,
+    "min_duration_s": 999.0,
+    "max_extra_decodes": 1
+  },
+  "adaptive_decodes": [
+    {
+      "name": "buzz_javanese",
+      "backend": "transformers_whisper",
+      "model": "models/buzzasr_javanese",
+      "language": null,
+      "manifest_languages": ["jav", "javind"],
+      "preprocess_profile": "model_raw",
+      "beam_size": 1,
+      "no_repeat_ngram_size": 3,
+      "repetition_penalty": 1.2,
+      "max_new_tokens": 256,
+      "long_form": false,
+      "prior": 1.5,
+      "enabled": true
+    }
+  ]
 }
