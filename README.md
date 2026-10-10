@@ -4,6 +4,31 @@ This repository records the progression from a multi-model ASR submission to
 conversation-disjoint adaptation experiments and a simpler protected-fusion
 candidate for DrivenData's *Lost in Transcription* competition.
 
+## Start here: the full project story
+
+Read the [case study](LOST_IN_TRANSCRIPTION_CASE_STUDY.md) for the complete
+project arc. It explains the problem and execution constraints, the data and
+preprocessing pipeline, the initial model exploration, why the broad ensemble
+was not reliable enough, and how the project pivoted to an adapted Whisper
+anchor with bounded corrections.
+
+The five primary model families explored were **Whisper, Qwen, XLS-R,
+MERaLiON, and BuzzASR**. The earliest weighted-medoid system used Whisper,
+Qwen, and XLS-R; MERaLiON and BuzzASR entered later ensemble experiments. The
+case study distinguishes these exploration stages from the final submitted
+system and the later Large-v3 research candidate.
+
+Useful case-study sections:
+
+- [Problem and execution constraints](LOST_IN_TRANSCRIPTION_CASE_STUDY.md#2-problem-and-execution-constraints)
+- [Data and domain mismatch](LOST_IN_TRANSCRIPTION_CASE_STUDY.md#3-data-and-domain-mismatch)
+- [Preprocessing pipeline](LOST_IN_TRANSCRIPTION_CASE_STUDY.md#5-preprocessing-pipeline)
+- [Development chronology](LOST_IN_TRANSCRIPTION_CASE_STUDY.md#6-development-chronology)
+- [Initial models and ensemble experiments](LOST_IN_TRANSCRIPTION_CASE_STUDY.md#7-models-and-initial-ensemble-experiments)
+- [Why the broad ensemble failed and why I pivoted](LOST_IN_TRANSCRIPTION_CASE_STUDY.md#8-why-the-broad-ensemble-could-fail)
+- [Whisper Turbo pivot and protected fusion](LOST_IN_TRANSCRIPTION_CASE_STUDY.md#9-pivot-to-a-whisper-turbo-anchor)
+- [Later Large-v3 research and final evidence](LOST_IN_TRANSCRIPTION_CASE_STUDY.md#13-large-v3-follow-on-research)
+
 ## What changed
 
 The first competition pipeline combined Qwen, MERaLiON, Whisper, and Buzz with
@@ -25,8 +50,10 @@ checkpoint supports corrections in the three-model candidate.
 | Earlier ensemble local replay | — | — | 0.2058 | Conversation-disjoint dev replay; hidden submission scored 0.4009 |
 | Phase 1 Whisper LoRA | 0.2236 | 0.2042 | 0.2197 | Strict leave-one-conversation-out; Submission #1 hidden WER 0.2862 |
 | Phase 2 Whisper + MERaLiON, simple fusion | 0.2185 | 0.2151 | 0.2178 | Out-of-fold simple fusion |
-| Phase 3 protected 2-model fusion | 0.2157 | 0.2039 | 0.2133 | Out-of-fold |
-| Phase 3 protected fusion + full-epoch Whisper support | **0.2124** | **0.1971** | **0.2093** | Best measured deployable OOF candidate |
+| Earlier Phase 3 protected 2-model fusion | 0.2157 | 0.2039 | 0.2133 | Earlier out-of-fold candidate |
+| Earlier Phase 3 fusion + full-epoch Whisper support | 0.2124 | 0.1971 | 0.2093 | Earlier out-of-fold candidate |
+| Final conservative Turbo/MERaLiON fusion | 0.2098 | 0.1853 | 0.2048 | Later strict-substitution selection |
+| Large-v3 research candidate | **0.1994** | **0.1727** | **0.1939** | Later local OOF; no supplied leaderboard result |
 
 The conversation folds are small and share only two source conversations. These
 numbers guide model selection; they do not predict hidden WER exactly. Phase
@@ -60,5 +87,7 @@ file/repository limits or are not ours to redistribute. See
 licensing notes.
 
 No hidden-test transcripts, labels, routing statistics, or pseudo-labels are
-included. The official CUDA/Python 3.12 container run remains unverified on the
-local MPS-only machine.
+included. The supplied CUDA log documents a successful run of the conservative
+Turbo/MERaLiON submission in about 31 minutes. The later Large-v3 research
+candidate was validated locally on MPS; a new A100 run and leaderboard result
+for that candidate are not available.
