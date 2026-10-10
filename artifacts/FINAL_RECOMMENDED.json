@@ -1,0 +1,12 @@
+{
+  "recommended_zip": "artifacts/FINAL_MAX_WER_REDUCTION_SUBMISSION.zip",
+  "sha256": "93f3d6e026057830d2be8e1438dfa26425088392d62b426670bc88549e538ed8",
+  "backup_zip": "artifacts/FINAL_LARGEV3_STANDALONE_BACKUP.zip",
+  "fold_A": 0.1993682245674492,
+  "fold_B": 0.17266591676040494,
+  "aggregate": 0.193937660852159,
+  "ready_to_submit": true,
+  "written_at_unix": 1790965343.798574,
+  "new_a100_measured": false,
+  "report": "FINAL_9H_REPORT.md"
+}

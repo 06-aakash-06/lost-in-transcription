@@ -1,4 +1,4 @@
-"""Offline inference only. Two merged models and protected Whisper fusion."""
+"""Offline inference only with independently decoded merged ASR models."""
 import os
 os.environ['HF_HUB_OFFLINE']='1'
 os.environ['TRANSFORMERS_OFFLINE']='1'
@@ -18,7 +18,10 @@ def validate_output(metadata,output):
     if list(output.columns)!=['audio_filename','transcript']:raise ValueError('incorrect output columns')
     if len(output)!=len(metadata):raise ValueError('incorrect row count')
     if output.audio_filename.tolist()!=metadata.audio_filename.tolist():raise ValueError('filename order changed')
-    if output.transcript.isna().any() or not output.transcript.map(lambda x:isinstance(x,str)).all():raise ValueError('invalid transcripts')
+    if output.transcript.isna().any() or not output.transcript.map(lambda x:isinstance(x,str) and bool(x.strip())).all():raise ValueError('invalid or empty transcripts')
+
+def select_device():
+    return 'cuda' if torch.cuda.is_available() else 'mps' if torch.backends.mps.is_available() else 'cpu'
 
 def release(device):
     gc.collect()
@@ -32,12 +35,12 @@ def run(data_dir,output_path,here):
     if 'audio_filename' not in metadata:raise ValueError('invalid metadata')
     names=metadata.audio_filename.tolist()
     if any(not isinstance(n,str) or not n or Path(n).name!=n for n in names):raise ValueError('invalid audio path')
-    device='cuda' if torch.cuda.is_available() else 'mps' if torch.backends.mps.is_available() else 'cpu'
+    device=select_device()
     print('device='+device,flush=True)
     if device=='mps':torch.mps.set_per_process_memory_fraction(.9)
     batch_size=config['cuda_batch_size'] if device=='cuda' else 1
     clips=data_dir/'clips'
-    anchor=WhisperAnchor(here/'models/whisper',language='indonesian',batch_size=batch_size,long_mode='native')
+    anchor=WhisperAnchor(here/'models'/config.get('anchor_model','whisper'),language='indonesian',batch_size=batch_size,long_mode='native')
     print('Whisper loaded',flush=True)
     anchors=[];confidences=[]
     # One independent clip's scores never influence another clip.
@@ -46,7 +49,8 @@ def run(data_dir,output_path,here):
         texts=anchor.transcribe_arrays(waves)
         if len(texts)!=len(waves):raise ValueError('Whisper output count mismatch')
         anchors.extend(texts)
-        for wave,text in zip(waves,texts):confidences.append({'anchor':score_pair(anchor,wave,[text])[0]})
+        for wave,text in zip(waves,texts):
+            confidences.append({'anchor':score_pair(anchor,wave,[text])[0]} if config['fusion'].get('mode') in ('confidence','hybrid','support_confidence') else {})
     # Sequential residency also fits the local 16 GB Mac. CUDA batches retain
     # model throughput without allocating two sets of activation/cache memory.
     del anchor;release(device)

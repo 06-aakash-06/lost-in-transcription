@@ -1,0 +1,32 @@
+{
+  "anchor": "large",
+  "strategy": "consensus",
+  "context": 0,
+  "cuda_batch_size": 8,
+  "checkpoint_full_contribution": 1.0,
+  "models": {
+    "large": {
+      "family": "whisper",
+      "source": "final_9h_attack/models/selected_large",
+      "language": "indonesian",
+      "beams": 1,
+      "cuda_dtype": "bfloat16",
+      "mps_dtype": "bfloat16",
+      "cpu_dtype": "float32"
+    },
+    "turbo": {
+      "family": "whisper",
+      "source": "phase3_protected_fusion/models/whisper_full",
+      "language": "indonesian",
+      "beams": 1,
+      "cuda_dtype": "float32",
+      "mps_dtype": "float32",
+      "cpu_dtype": "float32"
+    },
+    "meralion": {
+      "family": "meralion",
+      "source": "phase2_meralion/models/final_merged"
+    }
+  },
+  "phrase_guard": true
+}

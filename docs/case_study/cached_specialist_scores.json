@@ -1,0 +1,86 @@
+[
+  {
+    "cache": "experiments/heldout_bagasshw_jv_20.csv",
+    "clips": 20,
+    "wer": 0.9821182943603851,
+    "reference_words": 727
+  },
+  {
+    "cache": "experiments/heldout_bagasshw_jv_v2_20.csv",
+    "clips": 20,
+    "wer": 0.8198074277854195,
+    "reference_words": 727
+  },
+  {
+    "cache": "experiments/heldout_buzz_jv_20.csv",
+    "clips": 20,
+    "wer": 0.5350756533700137,
+    "reference_words": 727
+  },
+  {
+    "cache": "experiments/heldout_cahya_jv_20.csv",
+    "clips": 20,
+    "wer": 0.7579092159559835,
+    "reference_words": 727
+  },
+  {
+    "cache": "experiments/heldout_conformer_jv_20.csv",
+    "clips": 20,
+    "wer": 0.749656121045392,
+    "reference_words": 727
+  },
+  {
+    "cache": "experiments/heldout_large_jw_20.csv",
+    "clips": 20,
+    "wer": 0.6850068775790922,
+    "reference_words": 727
+  },
+  {
+    "cache": "experiments/heldout_panji_xlsr_20.csv",
+    "clips": 20,
+    "wer": 0.8376891334250344,
+    "reference_words": 727
+  },
+  {
+    "cache": "experiments/heldout_qwen_20.csv",
+    "clips": 20,
+    "wer": 0.657496561210454,
+    "reference_words": 727
+  },
+  {
+    "cache": "experiments/heldout_rizka_jv_20.csv",
+    "clips": 20,
+    "wer": 1.359009628610729,
+    "reference_words": 727
+  },
+  {
+    "cache": "experiments/heldout_tiny_jv_v4_20.csv",
+    "clips": 20,
+    "wer": 0.9546079779917469,
+    "reference_words": 727
+  },
+  {
+    "cache": "experiments/heldout_turbo_jw_20.csv",
+    "clips": 20,
+    "wer": 0.6698762035763411,
+    "reference_words": 727
+  },
+  {
+    "cache": "experiments/heldout_whisper_20.csv",
+    "clips": 20,
+    "wer": 0.7152682255845942,
+    "reference_words": 727
+  },
+  {
+    "cache": "experiments/heldout_whisper_auto_20.csv",
+    "clips": 20,
+    "wer": 0.6960110041265475,
+    "reference_words": 727
+  },
+  {
+    "cache": "experiments/heldout_xlsr_greedy_20.csv",
+    "clips": 20,
+    "wer": 0.8376891334250344,
+    "reference_words": 727
+  }
+]

@@ -1,0 +1,217 @@
+{
+  "stopped_at": {
+    "epoch": 1,
+    "batch": 218,
+    "batches_per_epoch": 2797,
+    "optimizer_step": 13,
+    "epoch_fraction": 0.07794065069717554,
+    "mean_loss": 1.1707413616256976,
+    "last_completed_batch_loss": 0.33238568902015686,
+    "learning_rate": 0.00013928571428571427,
+    "accumulated_microbatches": 10,
+    "gradient_tensors_saved": 464,
+    "checkpoint": "phase4_stronger_anchor/runs/final_indonesian_x4_two_epochs/interrupted_epoch_1_batch_000218",
+    "elapsed_s": 793.894407957996,
+    "total_elapsed_s": 793.8974920000037,
+    "stopped_utc": "2026-10-02T03:08:51.061828+00:00",
+    "reason": "User requested immediate stop and preservation; no evaluation or next stage."
+  },
+  "files": [
+    {
+      "path": ".gitignore",
+      "size_bytes": 36,
+      "sha256": "3993e4a7bd9de7db5244f0b802b3b6acd2fa0c07d32aea57cbd2618fc3ba6b6e"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 2056,
+      "sha256": "323b0873895d5000b597719df2270c7b5f3c938dfa0c74e78e0bc195fdf4875d"
+    },
+    {
+      "path": "RESUME.md",
+      "size_bytes": 2404,
+      "sha256": "311e12395efcd51b56665dcfc17420a9fed562a3b7ea2d951610c17fabcb9ebb"
+    },
+    {
+      "path": "audit.py",
+      "size_bytes": 4633,
+      "sha256": "c466b77fc6e80fb1e79ed0e2eeaf568d69e0814b5864ffc300bf37a59fafd84c"
+    },
+    {
+      "path": "average.py",
+      "size_bytes": 3461,
+      "sha256": "40f5ed7bd7f3221f74f0054594778d9050eca6b6e663a9b729ef79e2a3c85d9d"
+    },
+    {
+      "path": "build_final.py",
+      "size_bytes": 5782,
+      "sha256": "52697d27e4b2f88e3f2cfcb034e74467a38df23f9cb96be9b5d455455fd58bb9"
+    },
+    {
+      "path": "compare.py",
+      "size_bytes": 13626,
+      "sha256": "e79cb9a9bfb0a01c04bd929cc54223a8ed45012485e3160d59410475b1512db8"
+    },
+    {
+      "path": "configs/ratio4_two_epochs.json",
+      "size_bytes": 551,
+      "sha256": "365137cb232e625a42d7feaff729e77226656c7b3b72456e74fefe2d360b8731"
+    },
+    {
+      "path": "evaluate.py",
+      "size_bytes": 4880,
+      "sha256": "46f9d1e50e2599be0679487a40d65ebe302cb2aa8d4bb3d6ebee84c765aef2e1"
+    },
+    {
+      "path": "results/EXISTING_EVIDENCE.md",
+      "size_bytes": 1902,
+      "sha256": "e3c15f618c429d4829fabdaad4a0d3227cd64aa318ae03b58a51dfea90cd6f83"
+    },
+    {
+      "path": "results/EXISTING_PREDICTION_CACHE_SHA256SUMS.txt",
+      "size_bytes": 75308,
+      "sha256": "8d8ba9a4ad5ce3d4c494cd447cc79fb1ae5970863825e5b7924fe8e6815827fe"
+    },
+    {
+      "path": "results/checkpoint_preservation_verified.json",
+      "size_bytes": 395,
+      "sha256": "03293655f72cb87076ca51bc48cfcd30a8cdc7b293f7a4e6e1c1585cf433f855"
+    },
+    {
+      "path": "results/checkpoint_recovery_lldb.log",
+      "size_bytes": 1549,
+      "sha256": "f0f7d89cf6c5747d08b6b72a08845474f4d908a92cd2c4b82bfd5192f65cd165"
+    },
+    {
+      "path": "results/existing_evidence.csv",
+      "size_bytes": 2333,
+      "sha256": "2c85871162b2005c77ffd69bdd1c64d54890b8f282a4f85f3cab632fc12ea322"
+    },
+    {
+      "path": "results/existing_evidence.json",
+      "size_bytes": 20164,
+      "sha256": "3ae6454b306f8ba4046935a6f648babe6ff90f537f4e04470990e1f4905be762"
+    },
+    {
+      "path": "results/final_ratio4_training.log",
+      "size_bytes": 1403,
+      "sha256": "f8763872c94bceecdc261e1c632919726d6a1162f2b568b2ca2211987bf32859"
+    },
+    {
+      "path": "results/phase1_tests.log",
+      "size_bytes": 1122,
+      "sha256": "ac49200513cf25ca37ec0c56a47a5f63479a1331d288fab5c5e867b1c0a90634"
+    },
+    {
+      "path": "results/phase3_tests.log",
+      "size_bytes": 1561,
+      "sha256": "46e994297b9a3bf13668f6e81cd838f2f6388a525e7bcee29130e57e807404c0"
+    },
+    {
+      "path": "results/pipeline.log",
+      "size_bytes": 130,
+      "sha256": "f37a3ecd47cf3cdafa3b6dbd7b5a997d8aa1610afc2528a6a80d8497ccd622b5"
+    },
+    {
+      "path": "results/pipeline_status.json",
+      "size_bytes": 560,
+      "sha256": "d0f3c18ba6e59e4f5e23b09e38a8be2914e99e77987737eba8f164810796c84b"
+    },
+    {
+      "path": "results/stop_result.json",
+      "size_bytes": 717,
+      "sha256": "16a4615598d03a262c0118dd993189c5a78f3af9cce416d42ff050decef90fbd"
+    },
+    {
+      "path": "run_pipeline.py",
+      "size_bytes": 5128,
+      "sha256": "22cf7ce564ee1e6379a92f106782925e3d60b0fd4cb7e757287ae2099c20a2b9"
+    },
+    {
+      "path": "runs/final_indonesian_x4_two_epochs/config.json",
+      "size_bytes": 551,
+      "sha256": "365137cb232e625a42d7feaff729e77226656c7b3b72456e74fefe2d360b8731"
+    },
+    {
+      "path": "runs/final_indonesian_x4_two_epochs/interrupted_epoch_1_batch_000218/README.md",
+      "size_bytes": 5340,
+      "sha256": "562c9d8a88e8bc0584393f7386e79d98d303bf68a3991e3e4df70ad13ae0df45"
+    },
+    {
+      "path": "runs/final_indonesian_x4_two_epochs/interrupted_epoch_1_batch_000218/adapter_config.json",
+      "size_bytes": 1338,
+      "sha256": "fd492b140891d0c35e515ced422aa2b1dec76a2d632b19009b363247d5247e5c"
+    },
+    {
+      "path": "runs/final_indonesian_x4_two_epochs/interrupted_epoch_1_batch_000218/adapter_model.safetensors",
+      "size_bytes": 111475752,
+      "sha256": "987a885a7f53e956e3d02ebace21411d88f029be8a28cfcc1116c06729abe7cf"
+    },
+    {
+      "path": "runs/final_indonesian_x4_two_epochs/interrupted_epoch_1_batch_000218/added_tokens.json",
+      "size_bytes": 34648,
+      "sha256": "3c51f66c4c21f9e126970078f11ae77a78c74aee8df606ee9daba86e467108e0"
+    },
+    {
+      "path": "runs/final_indonesian_x4_two_epochs/interrupted_epoch_1_batch_000218/merges.txt",
+      "size_bytes": 493869,
+      "sha256": "2df2990a395e35e8dfbc7511e08c12d56018d8d04691e0133e5d63b21e154dc6"
+    },
+    {
+      "path": "runs/final_indonesian_x4_two_epochs/interrupted_epoch_1_batch_000218/normalizer.json",
+      "size_bytes": 52666,
+      "sha256": "bf1c507dc8724ca9cf9903640dacfb69dae2f00edee4f21ceba106a7392f26dd"
+    },
+    {
+      "path": "runs/final_indonesian_x4_two_epochs/interrupted_epoch_1_batch_000218/preprocessor_config.json",
+      "size_bytes": 357,
+      "sha256": "654cf18d3e163b948ceaf9766da56ce0b52de265d58673cf61c9376f126bd499"
+    },
+    {
+      "path": "runs/final_indonesian_x4_two_epochs/interrupted_epoch_1_batch_000218/special_tokens_map.json",
+      "size_bytes": 2186,
+      "sha256": "baea4ea09372eb4fca86b4e4346139fd73cb807d5087e9de0948e971739c3e74"
+    },
+    {
+      "path": "runs/final_indonesian_x4_two_epochs/interrupted_epoch_1_batch_000218/tokenizer.json",
+      "size_bytes": 3931381,
+      "sha256": "41948c970b3c91825846ed6a3d4311aaa8d25a4821df4d1a9f7003cf411e4ae4"
+    },
+    {
+      "path": "runs/final_indonesian_x4_two_epochs/interrupted_epoch_1_batch_000218/tokenizer_config.json",
+      "size_bytes": 282873,
+      "sha256": "3c75940dfce3a294fca7041a5faff011677f1b68fa85e47511bb8cf6dccaded6"
+    },
+    {
+      "path": "runs/final_indonesian_x4_two_epochs/interrupted_epoch_1_batch_000218/train_metrics.json",
+      "size_bytes": 717,
+      "sha256": "16a4615598d03a262c0118dd993189c5a78f3af9cce416d42ff050decef90fbd"
+    },
+    {
+      "path": "runs/final_indonesian_x4_two_epochs/interrupted_epoch_1_batch_000218/training_state.pt",
+      "size_bytes": 334814291,
+      "sha256": "f14acf6db9444e3625a387b5cf1feb96601fd1dfd292a3210010422f84e597ad"
+    },
+    {
+      "path": "runs/final_indonesian_x4_two_epochs/interrupted_epoch_1_batch_000218/vocab.json",
+      "size_bytes": 835528,
+      "sha256": "6788c80b082e9b0d1393147d3a3e62ba19285ac0c82ace8e5ef00f37ead58971"
+    },
+    {
+      "path": "runs/final_indonesian_x4_two_epochs/provenance.json",
+      "size_bytes": 344,
+      "sha256": "e6a057a5e459b03731999b136dc22b9e002bfca3c58b53b095e9911f967080e5"
+    },
+    {
+      "path": "stop_remote.py",
+      "size_bytes": 4001,
+      "sha256": "a64769473cfee2a3aabc644d4cb607839caa127ccaf3d4f710e2e2dd7b0bc8c2"
+    },
+    {
+      "path": "train.py",
+      "size_bytes": 11337,
+      "sha256": "806dd36a9626fbcfaf12938965b551509518d5b2baa38c40edcadd8036c17262"
+    }
+  ],
+  "new_prediction_caches": "None created; no evaluation was started. Existing Phase 1/2/3 caches were left intact."
+}

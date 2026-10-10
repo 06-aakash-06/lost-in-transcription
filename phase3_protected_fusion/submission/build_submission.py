@@ -6,9 +6,11 @@ SKIP={'merge_validation.json','adapter_model.safetensors','adapter_config.json',
 def build(output,config):
     if output.resolve()==(ROOT/'artifacts/phase1_whisper_anchor_submission.zip').resolve():raise ValueError('refusing to overwrite known-good Phase 1 archive')
     entries={'main.py':HERE/'main.py','config.json':(json.dumps(config,sort_keys=True,indent=2)+'\n').encode()}
-    for path in sorted((HERE/'runtime').glob('*.py')):entries['runtime/'+path.name]=path
+    for path in sorted((HERE/'runtime').glob('*.py')):
+        if path.name!='edit_gate.py':entries['runtime/'+path.name]=path
     models=[('whisper',ROOT/'phase1_whisper_anchor/models/final_merged'),('meralion',ROOT/'phase2_meralion/models/final_merged')]
-    if config.get('third_model'):models.append((config['third_model'],HERE/'models'/config['third_model']))
+    extra={config.get('anchor_model','whisper'),config.get('third_model')}-{'whisper','meralion',None}
+    for name in sorted(extra):models.append((name,HERE/'models'/name))
     for name,model in models:
         if not (model/'config.json').exists() or not list(model.glob('*.safetensors')):raise FileNotFoundError('merged checkpoint missing')
         for path in sorted(model.iterdir()):

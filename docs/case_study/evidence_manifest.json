@@ -1,0 +1,111 @@
+{
+  "reviewed_on": "2026-10-08",
+  "source_files": {
+    "processed/v2/manifest.json": {
+      "bytes": 5240,
+      "sha256": "5090206789f434c4368f94bdffb507f0b2e30d1e7930a84df687dd2006c30b9d"
+    },
+    "processed/v2/eda/duration_summary.tsv": {
+      "bytes": 359,
+      "sha256": "ee8160ba8d404de1ec63f21d88cef155889f43c03092078d24020fa0ba160132"
+    },
+    "processed/v2/eda/vocabulary_summary.tsv": {
+      "bytes": 148,
+      "sha256": "20d6fc154a61aa6573b81cd9a2e86c62b20c7114813d8bdd0d9c390af1234fa1"
+    },
+    "DEV_ROUTING_DIAGNOSIS.md": {
+      "bytes": 5089,
+      "sha256": "27983fe66b0bd40965ec967dc2ba7be03c6e05a030f5e66956d081b9521a64dc"
+    },
+    "ARCHITECTURE_HANDOFF.md": {
+      "bytes": 11540,
+      "sha256": "ac32626b95aa7ea2c895eab1ac89da7546a0494f8a49d7fa03894537906c2f39"
+    },
+    "phase1_whisper_anchor/PHASE1_REPORT.md": {
+      "bytes": 5744,
+      "sha256": "a66a5d08cac93d91e640af8f1cf7b17ca82c6608d230a85c3621919e67279516"
+    },
+    "phase2_meralion/PHASE2_REPORT.md": {
+      "bytes": 4912,
+      "sha256": "3363c70eea0b8adff40039744a83f64c410b80a0ac0b20d5ca1b72ce492f3757"
+    },
+    "phase3_protected_fusion/PHASE3_REPORT.md": {
+      "bytes": 6589,
+      "sha256": "9ecb3a15e486a9b969306cd52b93d0c728adc07621e1a153bc45c196a76f4df6"
+    },
+    "phase3_protected_fusion/FINAL_CONSERVATIVE_REPORT.md": {
+      "bytes": 2750,
+      "sha256": "fac55ffdecfabdac7a5d9a23465435b68da940a71926d6d6c7e864e8e107c5a0"
+    },
+    "phase3_protected_fusion/configs/final_conservative_submission.json": {
+      "bytes": 278,
+      "sha256": "c39eab7f5586a856d8b2ea2fddc14026b44eb42620bc5e89ea048c5279572d90"
+    },
+    "phase3_protected_fusion/main.py": {
+      "bytes": 4724,
+      "sha256": "3f069ffc58c9249f73bdd912a155175dad62a6c0fdd285e8c0f5dfec7553e168"
+    },
+    "phase3_protected_fusion/runtime/fusion.py": {
+      "bytes": 5738,
+      "sha256": "07a23d58e44e6fccf9b2d9caafbcb33c5e4453b0f1512328e2c4ad03083cbb32"
+    },
+    "phase4_stronger_anchor/RESUME.md": {
+      "bytes": 2404,
+      "sha256": "311e12395efcd51b56665dcfc17420a9fed562a3b7ea2d951610c17fabcb9ebb"
+    },
+    "overnight_attack/OVERNIGHT_REPORT.md": {
+      "bytes": 3992,
+      "sha256": "a2d0f6746a0950a42bebc231b02fd470f490fba706cff8e8b0127d146152252e"
+    },
+    "FINAL_9H_REPORT.md": {
+      "bytes": 10641,
+      "sha256": "7111f53d36fd5262e69c7b74570fd315ba7505381fde283bbb09dd4b373fcf89"
+    },
+    "final_9h_attack/results/completion.json": {
+      "bytes": 521,
+      "sha256": "e200d7df07fe28d3f14f636132a6e3bb54a67b39d68e2a20567e5f5173261624"
+    },
+    "final_9h_attack/results/phrase_guard_comparison.json": {
+      "bytes": 25326,
+      "sha256": "3ac647df6acd4640515768709e6a8ef868f3f32ad9876668a9869d441f52cb17"
+    },
+    "final_9h_attack/results/nbest_comparison.json": {
+      "bytes": 3851,
+      "sha256": "c7baf23dc1e65db81984d8faabd8882a99d25d9d63fe1452da9938851350bb4b"
+    },
+    "docs/case_study/submitted_cuda_log.txt": {
+      "bytes": 11567,
+      "sha256": "26c3b973cb3b1548c6952f6f2ee000d21ae33857c3fd8d051d99fc23c7ed4b4b"
+    },
+    "docs/case_study/leaderboard_progression.png": {
+      "bytes": 233607,
+      "sha256": "ffbae0ef40c1479b5ffe81ea22a9dfdcf7f94f4b31720fbb424fd3201d2f8da3"
+    }
+  },
+  "submitted_archive_inventory_match": {
+    "path": "artifacts/FINAL_SUBMISSION_CONSERVATIVE.zip",
+    "sha256": "6001974161873a9d1cd1313cd15960aa319717f0b9d98226f9aeb11f4cbad838",
+    "entries": 52,
+    "uncompressed_bytes": 13131390985,
+    "zip_bytes": 13122558624,
+    "same_entry_count_and_uncompressed_size_as_supplied_log": true,
+    "log_has_archive_sha256": false
+  },
+  "leaderboard_first_column": [
+    0.4273,
+    0.414,
+    0.4009,
+    0.2862,
+    0.2786,
+    0.2712
+  ],
+  "leaderboard_second_column": [
+    0.4234,
+    0.4123,
+    0.3963,
+    0.2914,
+    0.2837,
+    0.2743
+  ],
+  "score_column_header_limit": "Supplied image excludes column headers; public designation for first column also appears in earlier chat. Second is the user-reported final score."
+}

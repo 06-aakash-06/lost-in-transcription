@@ -39,3 +39,12 @@ artifacts/*.zip.sha256
 submission_candidate*.zip
 submission_metadata_blind_candidate.zip
 submission_timeout_fixed_candidate.zip
+
+# Local presentation build products
+tmp/
+
+# Preserved large local submission archives
+artifacts/preserved_9h_builds/*.zip
+overnight_attack/PRESERVATION_MANIFEST.json
+overnight_attack/SHA256SUMS.txt
+artifacts/preserved_9h_builds/*.zip.sha256

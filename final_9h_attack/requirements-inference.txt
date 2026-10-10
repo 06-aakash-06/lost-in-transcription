@@ -1,0 +1,10 @@
+# Tested with Transformers 4.57.6 and a platform-specific PyTorch installation.
+# Dependencies must already be installed; main.py performs no downloads.
+torch>=2.6,<3
+transformers==4.57.6
+accelerate>=1.12,<2
+numpy>=2
+pandas>=2.2
+soundfile>=0.14
+librosa==1.0.0
+safetensors>=0.4

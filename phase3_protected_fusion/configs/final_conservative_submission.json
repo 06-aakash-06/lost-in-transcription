@@ -1,0 +1,15 @@
+{
+  "anchor_model": "whisper_full",
+  "third_model": "whisper",
+  "cuda_batch_size": 8,
+  "fusion": {
+    "mode": "support",
+    "max_span": 3,
+    "context": 1,
+    "collapse_anchor": true,
+    "operations": [
+      "substitution"
+    ],
+    "strict_substitutions": true
+  }
+}

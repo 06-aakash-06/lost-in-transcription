@@ -1,0 +1,165 @@
+{
+  "sha256": "b7c2929ecfe3add896269f4f58753ad1bbc63d402b63db1ae47cee380a8ed97c",
+  "zip_bytes": 3203958580,
+  "model_bytes": 3208279250,
+  "model_sources": {
+    "large": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/models/selected_large"
+  },
+  "entries": {
+    "APACHE_LICENSE.txt": {
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/APACHE_LICENSE.txt"
+    },
+    "MODEL_NOTICES.md": {
+      "sha256": "c5f081f76d7689a9490a5d66c6166ac084d8d1019ea64a213aec6c4ed5e2a905",
+      "bytes": 1952,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/MODEL_NOTICES.md"
+    },
+    "WHISPER_LICENSE.txt": {
+      "sha256": "b5d65a59060e68c4ff940e1eddfa6f94b2d68fdf58ed7f4dd57721c997e35e9d",
+      "bytes": 1063,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/phase1_whisper_anchor/WHISPER_LICENSE.txt"
+    },
+    "config.json": {
+      "sha256": "93f01a63877d16a2bd89bb606a33f0929021b4c0e59b5974c4aa0889207a56c8",
+      "bytes": 348,
+      "source": null
+    },
+    "main.py": {
+      "sha256": "a94521dad888936fdd4214522a67d9b9d8dc5d078599f9d75af9a0e78fdc19e6",
+      "bytes": 4449,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/main.py"
+    },
+    "models/large/README.md": {
+      "sha256": "b05416eb578e9fc65ce137f3401bafdf3bc2feac7448e7dd180dcd367b8cfb52",
+      "bytes": 21829,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/models/selected_large/README.md"
+    },
+    "models/large/added_tokens.json": {
+      "sha256": "3c51f66c4c21f9e126970078f11ae77a78c74aee8df606ee9daba86e467108e0",
+      "bytes": 34648,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/models/selected_large/added_tokens.json"
+    },
+    "models/large/config.json": {
+      "sha256": "ad0e8d1e46f4d01f7861a21509e5d0f977d6cc1f367a370603c92541d819807b",
+      "bytes": 1272,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/models/selected_large/config.json"
+    },
+    "models/large/domain_delta.safetensors": {
+      "sha256": "ccf97c60c5b0442ef42b85f574cde231deac2117e0141cd82b530a7477adad0c",
+      "bytes": 115487384,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/models/selected_large/domain_delta.safetensors"
+    },
+    "models/large/generation_config.json": {
+      "sha256": "fbdfa70135de9b1d31553393f14e80aaeb1936ea36576b2ba864055943c09d23",
+      "bytes": 3903,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/models/selected_large/generation_config.json"
+    },
+    "models/large/lora_runtime.json": {
+      "sha256": "389ae91b066c1c6ffc0c01e0f283084d1eb9b46b61b12c0d89042e9f52eb356e",
+      "bytes": 378,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/models/selected_large/lora_runtime.json"
+    },
+    "models/large/merges.txt": {
+      "sha256": "2df2990a395e35e8dfbc7511e08c12d56018d8d04691e0133e5d63b21e154dc6",
+      "bytes": 493869,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/models/selected_large/merges.txt"
+    },
+    "models/large/model.safetensors": {
+      "sha256": "a8e94b85976e5864ba3e9525c7e6c83b2a1eca42d4b797a0c7c24d778e40fd95",
+      "bytes": 3087130976,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/models/selected_large/model.safetensors"
+    },
+    "models/large/normalizer.json": {
+      "sha256": "bf1c507dc8724ca9cf9903640dacfb69dae2f00edee4f21ceba106a7392f26dd",
+      "bytes": 52666,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/models/selected_large/normalizer.json"
+    },
+    "models/large/preprocessor_config.json": {
+      "sha256": "654cf18d3e163b948ceaf9766da56ce0b52de265d58673cf61c9376f126bd499",
+      "bytes": 357,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/models/selected_large/preprocessor_config.json"
+    },
+    "models/large/special_tokens_map.json": {
+      "sha256": "baea4ea09372eb4fca86b4e4346139fd73cb807d5087e9de0948e971739c3e74",
+      "bytes": 2186,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/models/selected_large/special_tokens_map.json"
+    },
+    "models/large/tokenizer.json": {
+      "sha256": "41948c970b3c91825846ed6a3d4311aaa8d25a4821df4d1a9f7003cf411e4ae4",
+      "bytes": 3931381,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/models/selected_large/tokenizer.json"
+    },
+    "models/large/tokenizer_config.json": {
+      "sha256": "3c75940dfce3a294fca7041a5faff011677f1b68fa85e47511bb8cf6dccaded6",
+      "bytes": 282873,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/models/selected_large/tokenizer_config.json"
+    },
+    "models/large/vocab.json": {
+      "sha256": "6788c80b082e9b0d1393147d3a3e62ba19285ac0c82ace8e5ef00f37ead58971",
+      "bytes": 835528,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/models/selected_large/vocab.json"
+    },
+    "requirements-inference.txt": {
+      "sha256": "9b5167922bc7feed741db003bc1a8e9a3922562dc9202e25ca3ed10e71a6ec7d",
+      "bytes": 277,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/requirements-inference.txt"
+    },
+    "runtime/__init__.py": {
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "bytes": 1,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/runtime/__init__.py"
+    },
+    "runtime/audio.py": {
+      "sha256": "a617bcc51e48dddfa72d12a50b056624543c5db6d3d6f9d75c0a8e31676967f1",
+      "bytes": 1183,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/runtime/audio.py"
+    },
+    "runtime/confidence.py": {
+      "sha256": "887a47d27a5145527076fa392102d49166e734a1ea103ea549c159a2a4ebe1bf",
+      "bytes": 2372,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/runtime/confidence.py"
+    },
+    "runtime/consensus.py": {
+      "sha256": "6eb379264b5d8ee81fef0fde91daff152aa2b10439af779e619ef2f5e7498c22",
+      "bytes": 3334,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/runtime/consensus.py"
+    },
+    "runtime/delta.py": {
+      "sha256": "f09d72342247b5e418b50f5b11c7db049bc7b61c2489f3f54157212e2c32d63a",
+      "bytes": 2155,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/runtime/delta.py"
+    },
+    "runtime/fusion.py": {
+      "sha256": "07a23d58e44e6fccf9b2d9caafbcb33c5e4453b0f1512328e2c4ad03083cbb32",
+      "bytes": 5738,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/runtime/fusion.py"
+    },
+    "runtime/meralion.py": {
+      "sha256": "0891d795e7814346045e1483bfb84ac28482612ee100519f43af39ab8be9e202",
+      "bytes": 1673,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/runtime/meralion.py"
+    },
+    "runtime/ngram.py": {
+      "sha256": "b5931e265dd632f54fedf66e7c44c74381bbce33dede6704285ac39bbfb06495",
+      "bytes": 3441,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/runtime/ngram.py"
+    },
+    "runtime/postprocess.py": {
+      "sha256": "369fe617f393ff0cef562b33d98bc8b857416a2ae74a038d31f4c2808d96159e",
+      "bytes": 1355,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/runtime/postprocess.py"
+    },
+    "runtime/repetition_guard.py": {
+      "sha256": "facb95dcbb89d357a9171e38c21415fabcc20ed1c17f96dde931179d9f52154e",
+      "bytes": 825,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/runtime/repetition_guard.py"
+    },
+    "runtime/whisper.py": {
+      "sha256": "78ad6e73748329e068d561b9dda70160fdb12a5036a43de2a763f8bbc0456160",
+      "bytes": 3414,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/runtime/whisper.py"
+    }
+  }
+}
