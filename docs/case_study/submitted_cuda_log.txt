@@ -1,0 +1,252 @@
+
+==========
+== CUDA ==
+==========
+
+CUDA Version 13.0.3
+
+Container image Copyright (c) 2016-2023, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+By pulling and using the container, you accept the terms and conditions of this license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+A copy of this license is made available in this container at /NGC-DL-CONTAINER-LICENSE for your convenience.
+
++ main
++ tee /code_execution/submission/log.txt
++ '[' -n 10 ']'
++ log INFO 'Sleeping 10 seconds before running submission...'
++ set +x
+2026-10-01 20:58:28.111 | INFO | Sleeping 10 seconds before running submission...
++ sleep 10
++ expected_filename=main.py
++ cd /code_execution
++ '[' 0 -eq 1 ']'
+++ zip -sf ./submission/submission.zip
++ submission_files='Archive contains:
+MODEL_NOTICES.md
+WHISPER_LICENSE.txt
+config.json
+main.py
+models/meralion/MERaLiON-3-Public-Licence.pdf
+models/meralion/MERaLiON-3-Public-Licence.txt
+models/meralion/MODEL_NOTICES.md
+models/meralion/chat_template.jinja
+models/meralion/config.json
+models/meralion/configuration_meralion3.py
+models/meralion/generation_config.json
+models/meralion/model-00001-of-00004.safetensors
+models/meralion/model-00002-of-00004.safetensors
+models/meralion/model-00003-of-00004.safetensors
+models/meralion/model-00004-of-00004.safetensors
+models/meralion/model.safetensors.index.json
+models/meralion/modeling_meralion3.py
+models/meralion/preprocessor_config.json
+models/meralion/processing_meralion3.py
+models/meralion/processor_config.json
+models/meralion/special_tokens_map.json
+models/meralion/tokenizer.json
+models/meralion/tokenizer_config.json
+models/whisper/added_tokens.json
+models/whisper/config.json
+models/whisper/generation_config.json
+models/whisper/merges.txt
+models/whisper/model.safetensors
+models/whisper/normalizer.json
+models/whisper/preprocessor_config.json
+models/whisper/special_tokens_map.json
+models/whisper/tokenizer.json
+models/whisper/tokenizer_config.json
+models/whisper/vocab.json
+models/whisper_full/added_tokens.json
+models/whisper_full/config.json
+models/whisper_full/generation_config.json
+models/whisper_full/merges.txt
+models/whisper_full/model.safetensors
+models/whisper_full/normalizer.json
+models/whisper_full/preprocessor_config.json
+models/whisper_full/special_tokens_map.json
+models/whisper_full/tokenizer.json
+models/whisper_full/tokenizer_config.json
+models/whisper_full/vocab.json
+runtime/__init__.py
+runtime/audio.py
+runtime/confidence.py
+runtime/fusion.py
+runtime/meralion.py
+runtime/postprocess.py
+runtime/whisper.py
+Total 52 entries (13131390985 bytes)'
++ grep -F -q -- main.py
++ log INFO 'Unpacking submission into src/...'
++ set +x
+2026-10-01 20:58:53.182 | INFO | Unpacking submission into src/...
++ unzip ./submission/submission.zip -d ./src
+Archive:  ./submission/submission.zip
+inflating: ./src/MODEL_NOTICES.md
+inflating: ./src/WHISPER_LICENSE.txt
+inflating: ./src/config.json
+inflating: ./src/main.py
+inflating: ./src/models/meralion/MERaLiON-3-Public-Licence.pdf
+inflating: ./src/models/meralion/MERaLiON-3-Public-Licence.txt
+inflating: ./src/models/meralion/MODEL_NOTICES.md
+inflating: ./src/models/meralion/chat_template.jinja
+inflating: ./src/models/meralion/config.json
+inflating: ./src/models/meralion/configuration_meralion3.py
+inflating: ./src/models/meralion/generation_config.json
+extracting: ./src/models/meralion/model-00001-of-00004.safetensors
+extracting: ./src/models/meralion/model-00002-of-00004.safetensors
+extracting: ./src/models/meralion/model-00003-of-00004.safetensors
+extracting: ./src/models/meralion/model-00004-of-00004.safetensors
+inflating: ./src/models/meralion/model.safetensors.index.json
+inflating: ./src/models/meralion/modeling_meralion3.py
+inflating: ./src/models/meralion/preprocessor_config.json
+inflating: ./src/models/meralion/processing_meralion3.py
+inflating: ./src/models/meralion/processor_config.json
+inflating: ./src/models/meralion/special_tokens_map.json
+extracting: ./src/models/meralion/tokenizer.json
+inflating: ./src/models/meralion/tokenizer_config.json
+inflating: ./src/models/whisper/added_tokens.json
+inflating: ./src/models/whisper/config.json
+inflating: ./src/models/whisper/generation_config.json
+inflating: ./src/models/whisper/merges.txt
+extracting: ./src/models/whisper/model.safetensors
+inflating: ./src/models/whisper/normalizer.json
+inflating: ./src/models/whisper/preprocessor_config.json
+inflating: ./src/models/whisper/special_tokens_map.json
+inflating: ./src/models/whisper/tokenizer.json
+inflating: ./src/models/whisper/tokenizer_config.json
+inflating: ./src/models/whisper/vocab.json
+inflating: ./src/models/whisper_full/added_tokens.json
+inflating: ./src/models/whisper_full/config.json
+inflating: ./src/models/whisper_full/generation_config.json
+inflating: ./src/models/whisper_full/merges.txt
+extracting: ./src/models/whisper_full/model.safetensors
+inflating: ./src/models/whisper_full/normalizer.json
+inflating: ./src/models/whisper_full/preprocessor_config.json
+inflating: ./src/models/whisper_full/special_tokens_map.json
+inflating: ./src/models/whisper_full/tokenizer.json
+inflating: ./src/models/whisper_full/tokenizer_config.json
+inflating: ./src/models/whisper_full/vocab.json
+inflating: ./src/runtime/__init__.py
+inflating: ./src/runtime/audio.py
+inflating: ./src/runtime/confidence.py
+inflating: ./src/runtime/fusion.py
+inflating: ./src/runtime/meralion.py
+inflating: ./src/runtime/postprocess.py
+inflating: ./src/runtime/whisper.py
++ log INFO 'Showing current working directory contents:'
++ set +x
+2026-10-01 21:00:07.848 | INFO | Showing current working directory contents:
++ ls -alh
+total 260K
+drwxr-xr-x 1 runtimeuser runtimeuser 4.0K Oct  1 20:58 .
+drwxr-xr-x 1 root        root        4.0K Oct  1 20:58 ..
+-rw-r--r-- 1 runtimeuser runtimeuser    5 Sep  9 20:29 .python-version
+drwxr-xr-x 5 runtimeuser runtimeuser 4.0K Sep  9 20:32 .venv
+drwxrwxrwx 2 root        root        4.0K Oct  1 20:58 data
+drwxrwxrwx 2 root        root        4.0K Oct  1 20:58 huggingface_models
+-rw-r--r-- 1 runtimeuser runtimeuser 1.3K Sep  9 20:29 pyproject.toml
+drwxr-xr-x 4 runtimeuser runtimeuser 4.0K Oct  1 21:00 src
+drwxrwxrwx 2 root        root        4.0K Oct  1 20:58 submission
+-rw-r--r-- 1 runtimeuser runtimeuser 236K Sep  9 20:29 uv.lock
++ log INFO 'Showing src/ directory contents:'
++ set +x
+2026-10-01 21:00:07.853 | INFO | Showing src/ directory contents:
++ find src/
+src/
+src/models
+src/models/whisper_full
+src/models/whisper_full/special_tokens_map.json
+src/models/whisper_full/tokenizer.json
+src/models/whisper_full/normalizer.json
+src/models/whisper_full/preprocessor_config.json
+src/models/whisper_full/generation_config.json
+src/models/whisper_full/model.safetensors
+src/models/whisper_full/vocab.json
+src/models/whisper_full/merges.txt
+src/models/whisper_full/added_tokens.json
+src/models/whisper_full/tokenizer_config.json
+src/models/whisper_full/config.json
+src/models/whisper
+src/models/whisper/special_tokens_map.json
+src/models/whisper/tokenizer.json
+src/models/whisper/normalizer.json
+src/models/whisper/preprocessor_config.json
+src/models/whisper/generation_config.json
+src/models/whisper/model.safetensors
+src/models/whisper/vocab.json
+src/models/whisper/merges.txt
+src/models/whisper/added_tokens.json
+src/models/whisper/tokenizer_config.json
+src/models/whisper/config.json
+src/models/meralion
+src/models/meralion/special_tokens_map.json
+src/models/meralion/tokenizer.json
+src/models/meralion/model-00001-of-00004.safetensors
+src/models/meralion/modeling_meralion3.py
+src/models/meralion/chat_template.jinja
+src/models/meralion/MERaLiON-3-Public-Licence.pdf
+src/models/meralion/MODEL_NOTICES.md
+src/models/meralion/preprocessor_config.json
+src/models/meralion/model-00002-of-00004.safetensors
+src/models/meralion/MERaLiON-3-Public-Licence.txt
+src/models/meralion/model-00004-of-00004.safetensors
+src/models/meralion/processor_config.json
+src/models/meralion/generation_config.json
+src/models/meralion/processing_meralion3.py
+src/models/meralion/configuration_meralion3.py
+src/models/meralion/tokenizer_config.json
+src/models/meralion/model.safetensors.index.json
+src/models/meralion/model-00003-of-00004.safetensors
+src/models/meralion/config.json
+src/MODEL_NOTICES.md
+src/main.py
+src/WHISPER_LICENSE.txt
+src/config.json
+src/runtime
+src/runtime/confidence.py
+src/runtime/__init__.py
+src/runtime/postprocess.py
+src/runtime/whisper.py
+src/runtime/audio.py
+src/runtime/meralion.py
+src/runtime/fusion.py
++ log INFO 'Running submission...'
++ set +x
+2026-10-01 21:00:07.858 | INFO | Running submission...
++ uv run src/main.py
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1790888412.995167      84 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+starting inference
+device=cuda
+`torch_dtype` is deprecated! Use `dtype` instead!
+Whisper loaded
+`generation_config` default values have been modified to match model-specific defaults: {'suppress_tokens': [1, 2, 7, 8, 9, 10, 14, 25, 26, 27, 28, 29, 31, 58, 59, 60, 61, 62, 63, 90, 91, 92, 93, 359, 503, 522, 542, 873, 893, 902, 918, 922, 931, 1350, 1853, 1982, 2460, 2627, 3246, 3253, 3268, 3536,  < ... WARNING: remainder of line removed: (dropped 413 chars) >
+A custom logits processor of type <class 'transformers.generation.logits_process.SuppressTokensLogitsProcessor'> has been passed to `.generate()`, but it was also created in `.generate()`, given its parameterization. The custom <class 'transformers.generation.logits_process.SuppressTokensLogitsProce < ... WARNING: remainder of line removed: (dropped 173 chars) >
+A custom logits processor of type <class 'transformers.generation.logits_process.SuppressTokensAtBeginLogitsProcessor'> has been passed to `.generate()`, but it was also created in `.generate()`, given its parameterization. The custom <class 'transformers.generation.logits_process.SuppressTokensAtBe < ... WARNING: remainder of line removed: (dropped 194 chars) >
+third voter loaded
+The tokenizer you are loading from '/code_execution/src/models/meralion' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True < ... WARNING: remainder of line removed: (dropped 53 chars) >
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:00,  4.52it/s]
+Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00,  4.77it/s]
+Loading checkpoint shards:  75%|███████▌  | 3/4 [00:00<00:00,  4.52it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00,  5.20it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00,  4.96it/s]
+MERaLiON loaded
+inference complete
+submission written
+elapsed=1840.1
++ '[' -f ./submission/submission.csv ']'
++ log INFO 'Found submission.csv in submission/.'
++ set +x
+2026-10-01 21:30:56.164 | INFO | Found submission.csv in submission/.
++ exit_code=0
++ cp /code_execution/submission/log.txt /tmp/log
++ log INFO 'Submission run completed with exit code: 0'
++ set +x
++ exit 0
+2026-10-01 21:30:56.183 | INFO | Submission run completed with exit code: 0

@@ -1,0 +1,46 @@
+[
+  {
+    "fold": "fold_A",
+    "kind": "improved",
+    "clip_id": "7f771518e032443888714216a9b94a3b",
+    "anchor_wer": 0.1875,
+    "fused_wer": 0.14583333333333334,
+    "anchor_excerpt": "beberapa kali pengin, e..., coba",
+    "candidate_excerpt": "beberapa kali pengen, e..., coba",
+    "source": "phase3_protected_fusion.data.load; unchanged saved OOF caches; official scorer",
+    "references_used_only_for_posthoc_analysis": true
+  },
+  {
+    "fold": "fold_A",
+    "kind": "damaged",
+    "clip_id": "d78b4f3d1e7e4162bfbdad957e558d87",
+    "anchor_wer": 0.21739130434782608,
+    "fused_wer": 0.2391304347826087,
+    "anchor_excerpt": "banget. Nah, nggak seperti kucing-kucing",
+    "candidate_excerpt": "banget. Nah, gak seperti kucing-kucing",
+    "source": "phase3_protected_fusion.data.load; unchanged saved OOF caches; official scorer",
+    "references_used_only_for_posthoc_analysis": true
+  },
+  {
+    "fold": "fold_B",
+    "kind": "improved",
+    "clip_id": "45b9fcafcd7b4b399d8157c94e824030",
+    "anchor_wer": 0.16363636363636364,
+    "fused_wer": 0.14545454545454545,
+    "anchor_excerpt": "tuh udah layak, apa sih,",
+    "candidate_excerpt": "tuh udah kayak apa sih,",
+    "source": "phase3_protected_fusion.data.load; unchanged saved OOF caches; official scorer",
+    "references_used_only_for_posthoc_analysis": true
+  },
+  {
+    "fold": "fold_B",
+    "kind": "damaged",
+    "clip_id": "a43d006c59014d06ae8a4f399e84e767",
+    "anchor_wer": 0.37254901960784315,
+    "fused_wer": 0.39215686274509803,
+    "anchor_excerpt": "gitu lho. Tau gak tau",
+    "candidate_excerpt": "gitu lho. Aku gak tau",
+    "source": "phase3_protected_fusion.data.load; unchanged saved OOF caches; official scorer",
+    "references_used_only_for_posthoc_analysis": true
+  }
+]

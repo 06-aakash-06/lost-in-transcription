@@ -1,0 +1,317 @@
+{
+  "sha256": "93f3d6e026057830d2be8e1438dfa26425088392d62b426670bc88549e538ed8",
+  "zip_bytes": 13089612505,
+  "model_bytes": 13098426152,
+  "model_sources": {
+    "large": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/models/selected_large",
+    "turbo": "/Users/aakash/Documents/Models and Research/LostinTranscription/phase3_protected_fusion/models/whisper_full",
+    "meralion": "/Users/aakash/Documents/Models and Research/LostinTranscription/phase2_meralion/models/final_merged"
+  },
+  "entries": {
+    "APACHE_LICENSE.txt": {
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/APACHE_LICENSE.txt"
+    },
+    "MODEL_NOTICES.md": {
+      "sha256": "c5f081f76d7689a9490a5d66c6166ac084d8d1019ea64a213aec6c4ed5e2a905",
+      "bytes": 1952,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/MODEL_NOTICES.md"
+    },
+    "WHISPER_LICENSE.txt": {
+      "sha256": "b5d65a59060e68c4ff940e1eddfa6f94b2d68fdf58ed7f4dd57721c997e35e9d",
+      "bytes": 1063,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/phase1_whisper_anchor/WHISPER_LICENSE.txt"
+    },
+    "config.json": {
+      "sha256": "10773858b9126b64c6a54904a398e4f107e09798378681fc909993433c7f4e29",
+      "bytes": 743,
+      "source": null
+    },
+    "main.py": {
+      "sha256": "a94521dad888936fdd4214522a67d9b9d8dc5d078599f9d75af9a0e78fdc19e6",
+      "bytes": 4449,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/main.py"
+    },
+    "models/large/README.md": {
+      "sha256": "b05416eb578e9fc65ce137f3401bafdf3bc2feac7448e7dd180dcd367b8cfb52",
+      "bytes": 21829,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/models/selected_large/README.md"
+    },
+    "models/large/added_tokens.json": {
+      "sha256": "3c51f66c4c21f9e126970078f11ae77a78c74aee8df606ee9daba86e467108e0",
+      "bytes": 34648,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/models/selected_large/added_tokens.json"
+    },
+    "models/large/config.json": {
+      "sha256": "ad0e8d1e46f4d01f7861a21509e5d0f977d6cc1f367a370603c92541d819807b",
+      "bytes": 1272,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/models/selected_large/config.json"
+    },
+    "models/large/domain_delta.safetensors": {
+      "sha256": "ccf97c60c5b0442ef42b85f574cde231deac2117e0141cd82b530a7477adad0c",
+      "bytes": 115487384,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/models/selected_large/domain_delta.safetensors"
+    },
+    "models/large/generation_config.json": {
+      "sha256": "fbdfa70135de9b1d31553393f14e80aaeb1936ea36576b2ba864055943c09d23",
+      "bytes": 3903,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/models/selected_large/generation_config.json"
+    },
+    "models/large/lora_runtime.json": {
+      "sha256": "389ae91b066c1c6ffc0c01e0f283084d1eb9b46b61b12c0d89042e9f52eb356e",
+      "bytes": 378,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/models/selected_large/lora_runtime.json"
+    },
+    "models/large/merges.txt": {
+      "sha256": "2df2990a395e35e8dfbc7511e08c12d56018d8d04691e0133e5d63b21e154dc6",
+      "bytes": 493869,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/models/selected_large/merges.txt"
+    },
+    "models/large/model.safetensors": {
+      "sha256": "a8e94b85976e5864ba3e9525c7e6c83b2a1eca42d4b797a0c7c24d778e40fd95",
+      "bytes": 3087130976,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/models/selected_large/model.safetensors"
+    },
+    "models/large/normalizer.json": {
+      "sha256": "bf1c507dc8724ca9cf9903640dacfb69dae2f00edee4f21ceba106a7392f26dd",
+      "bytes": 52666,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/models/selected_large/normalizer.json"
+    },
+    "models/large/preprocessor_config.json": {
+      "sha256": "654cf18d3e163b948ceaf9766da56ce0b52de265d58673cf61c9376f126bd499",
+      "bytes": 357,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/models/selected_large/preprocessor_config.json"
+    },
+    "models/large/special_tokens_map.json": {
+      "sha256": "baea4ea09372eb4fca86b4e4346139fd73cb807d5087e9de0948e971739c3e74",
+      "bytes": 2186,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/models/selected_large/special_tokens_map.json"
+    },
+    "models/large/tokenizer.json": {
+      "sha256": "41948c970b3c91825846ed6a3d4311aaa8d25a4821df4d1a9f7003cf411e4ae4",
+      "bytes": 3931381,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/models/selected_large/tokenizer.json"
+    },
+    "models/large/tokenizer_config.json": {
+      "sha256": "3c75940dfce3a294fca7041a5faff011677f1b68fa85e47511bb8cf6dccaded6",
+      "bytes": 282873,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/models/selected_large/tokenizer_config.json"
+    },
+    "models/large/vocab.json": {
+      "sha256": "6788c80b082e9b0d1393147d3a3e62ba19285ac0c82ace8e5ef00f37ead58971",
+      "bytes": 835528,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/models/selected_large/vocab.json"
+    },
+    "models/meralion/MERaLiON-3-Public-Licence.pdf": {
+      "sha256": "ca413486cc0fea7507ff3aa997ddf32b453fd2cfadf5aadd165ccaf9d67239c1",
+      "bytes": 225953,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/phase2_meralion/models/final_merged/MERaLiON-3-Public-Licence.pdf"
+    },
+    "models/meralion/MERaLiON-3-Public-Licence.txt": {
+      "sha256": "c438c55a09368d10d755c7602c084b7a9fd64ce95694f9222474148431c18235",
+      "bytes": 23324,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/phase2_meralion/models/final_merged/MERaLiON-3-Public-Licence.txt"
+    },
+    "models/meralion/MODEL_NOTICES.md": {
+      "sha256": "71c1f029d2310d0fbd3113b0535f8bbf74345364c6d398ad3ee9831165154dc8",
+      "bytes": 1586,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/phase2_meralion/models/final_merged/MODEL_NOTICES.md"
+    },
+    "models/meralion/chat_template.jinja": {
+      "sha256": "cd00f098978cd5001381d5f80a2b860463c8338238ceafa1f8ecd87fa8a262c8",
+      "bytes": 325,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/phase2_meralion/models/final_merged/chat_template.jinja"
+    },
+    "models/meralion/config.json": {
+      "sha256": "39637b40136c43215ca651804acae29b9a6dcd6b33a5530f07bc6087358c6c9f",
+      "bytes": 3569,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/phase2_meralion/models/final_merged/config.json"
+    },
+    "models/meralion/configuration_meralion3.py": {
+      "sha256": "c857fe1d26ca32166a78395d846f78aa604af4fa338fc83d37d9cf03e02ee42f",
+      "bytes": 3168,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/phase2_meralion/models/final_merged/configuration_meralion3.py"
+    },
+    "models/meralion/generation_config.json": {
+      "sha256": "09c00cbb13fdec87c2a09362db0cd657b477690c752514a161d29d3b8eb480e9",
+      "bytes": 191,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/phase2_meralion/models/final_merged/generation_config.json"
+    },
+    "models/meralion/model-00001-of-00004.safetensors": {
+      "sha256": "4948ec5d91f97bf2f883f7c6d15dd7e94d5f970dd2671ff1214015ee29560b34",
+      "bytes": 1385429488,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/phase2_meralion/models/final_merged/model-00001-of-00004.safetensors"
+    },
+    "models/meralion/model-00002-of-00004.safetensors": {
+      "sha256": "e00a64f3eb8ffd0496afdf4f4e3bb028fa6de925ce7ce6631d4d5cd8481afeb6",
+      "bytes": 1986627128,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/phase2_meralion/models/final_merged/model-00002-of-00004.safetensors"
+    },
+    "models/meralion/model-00003-of-00004.safetensors": {
+      "sha256": "0688c56a8f8b8e2e47ed22c4160b005ed00458ce0ee8c01d64add0312afa0317",
+      "bytes": 1996221872,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/phase2_meralion/models/final_merged/model-00003-of-00004.safetensors"
+    },
+    "models/meralion/model-00004-of-00004.safetensors": {
+      "sha256": "c331f49506e52f23a88b81d32f6c9c52cd5f646e69b272e75376eef8dce84e09",
+      "bytes": 1245871736,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/phase2_meralion/models/final_merged/model-00004-of-00004.safetensors"
+    },
+    "models/meralion/model.safetensors.index.json": {
+      "sha256": "5bfac6f936e81158f1cd267bcb3ba2329d2786311ffe156605c7526e4ef2875a",
+      "bytes": 71240,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/phase2_meralion/models/final_merged/model.safetensors.index.json"
+    },
+    "models/meralion/modeling_meralion3.py": {
+      "sha256": "9ec21babefabaf32b17d8802032805cf01aa6226ee2a0b492d3524dc4cd43bf9",
+      "bytes": 27539,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/phase2_meralion/models/final_merged/modeling_meralion3.py"
+    },
+    "models/meralion/preprocessor_config.json": {
+      "sha256": "f509dcc0ca6dedcf7ad3fd9f6732f73da09b1526bd25cf5798dcebf305708ca4",
+      "bytes": 449,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/phase2_meralion/models/final_merged/preprocessor_config.json"
+    },
+    "models/meralion/processing_meralion3.py": {
+      "sha256": "5644fcd8badc62aa2bffa69207d702cec53677488094c2c2d7a4671ed18a06be",
+      "bytes": 8934,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/phase2_meralion/models/final_merged/processing_meralion3.py"
+    },
+    "models/meralion/processor_config.json": {
+      "sha256": "33adbd1299f4581587c678c2ed5bfb517d91ad7f3c6e40188afa8d369adf4e64",
+      "bytes": 287,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/phase2_meralion/models/final_merged/processor_config.json"
+    },
+    "models/meralion/special_tokens_map.json": {
+      "sha256": "baec30ea10906f16adb8c18af7a34023002c1746542612b8b41c9f09e1351351",
+      "bytes": 636,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/phase2_meralion/models/final_merged/special_tokens_map.json"
+    },
+    "models/meralion/tokenizer.json": {
+      "sha256": "da85da8b8fe93b48e14095096ea8ad8e08a07f4f62cd656fead791296836fe3e",
+      "bytes": 34363031,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/phase2_meralion/models/final_merged/tokenizer.json"
+    },
+    "models/meralion/tokenizer_config.json": {
+      "sha256": "bf49f0d4524e6ca1835ab2142462acfe628944c45ccf380669392e805ffe4b57",
+      "bytes": 46570,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/phase2_meralion/models/final_merged/tokenizer_config.json"
+    },
+    "models/turbo/added_tokens.json": {
+      "sha256": "3c51f66c4c21f9e126970078f11ae77a78c74aee8df606ee9daba86e467108e0",
+      "bytes": 34648,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/phase3_protected_fusion/models/whisper_full/added_tokens.json"
+    },
+    "models/turbo/config.json": {
+      "sha256": "252b1df30fbe305ce2f5342436feecae0f338da7c11075ce733b1f0374f6a147",
+      "bytes": 1193,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/phase3_protected_fusion/models/whisper_full/config.json"
+    },
+    "models/turbo/generation_config.json": {
+      "sha256": "4617fcca458af3b91a103143aaac919c1ab6680b552d7abd10811b7248bd77b4",
+      "bytes": 3767,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/phase3_protected_fusion/models/whisper_full/generation_config.json"
+    },
+    "models/turbo/merges.txt": {
+      "sha256": "2df2990a395e35e8dfbc7511e08c12d56018d8d04691e0133e5d63b21e154dc6",
+      "bytes": 493869,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/phase3_protected_fusion/models/whisper_full/merges.txt"
+    },
+    "models/turbo/model.safetensors": {
+      "sha256": "3037db752751a5aa898c43dc67b4c36ae37c65ffa4b28f3fbd22bed7f74e9720",
+      "bytes": 3235581408,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/phase3_protected_fusion/models/whisper_full/model.safetensors"
+    },
+    "models/turbo/normalizer.json": {
+      "sha256": "bf1c507dc8724ca9cf9903640dacfb69dae2f00edee4f21ceba106a7392f26dd",
+      "bytes": 52666,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/phase3_protected_fusion/models/whisper_full/normalizer.json"
+    },
+    "models/turbo/preprocessor_config.json": {
+      "sha256": "654cf18d3e163b948ceaf9766da56ce0b52de265d58673cf61c9376f126bd499",
+      "bytes": 357,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/phase3_protected_fusion/models/whisper_full/preprocessor_config.json"
+    },
+    "models/turbo/special_tokens_map.json": {
+      "sha256": "baea4ea09372eb4fca86b4e4346139fd73cb807d5087e9de0948e971739c3e74",
+      "bytes": 2186,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/phase3_protected_fusion/models/whisper_full/special_tokens_map.json"
+    },
+    "models/turbo/tokenizer.json": {
+      "sha256": "41948c970b3c91825846ed6a3d4311aaa8d25a4821df4d1a9f7003cf411e4ae4",
+      "bytes": 3931381,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/phase3_protected_fusion/models/whisper_full/tokenizer.json"
+    },
+    "models/turbo/tokenizer_config.json": {
+      "sha256": "3c75940dfce3a294fca7041a5faff011677f1b68fa85e47511bb8cf6dccaded6",
+      "bytes": 282873,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/phase3_protected_fusion/models/whisper_full/tokenizer_config.json"
+    },
+    "models/turbo/vocab.json": {
+      "sha256": "6788c80b082e9b0d1393147d3a3e62ba19285ac0c82ace8e5ef00f37ead58971",
+      "bytes": 835528,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/phase3_protected_fusion/models/whisper_full/vocab.json"
+    },
+    "requirements-inference.txt": {
+      "sha256": "9b5167922bc7feed741db003bc1a8e9a3922562dc9202e25ca3ed10e71a6ec7d",
+      "bytes": 277,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/requirements-inference.txt"
+    },
+    "runtime/__init__.py": {
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "bytes": 1,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/runtime/__init__.py"
+    },
+    "runtime/audio.py": {
+      "sha256": "a617bcc51e48dddfa72d12a50b056624543c5db6d3d6f9d75c0a8e31676967f1",
+      "bytes": 1183,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/runtime/audio.py"
+    },
+    "runtime/confidence.py": {
+      "sha256": "887a47d27a5145527076fa392102d49166e734a1ea103ea549c159a2a4ebe1bf",
+      "bytes": 2372,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/runtime/confidence.py"
+    },
+    "runtime/consensus.py": {
+      "sha256": "6eb379264b5d8ee81fef0fde91daff152aa2b10439af779e619ef2f5e7498c22",
+      "bytes": 3334,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/runtime/consensus.py"
+    },
+    "runtime/delta.py": {
+      "sha256": "f09d72342247b5e418b50f5b11c7db049bc7b61c2489f3f54157212e2c32d63a",
+      "bytes": 2155,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/runtime/delta.py"
+    },
+    "runtime/fusion.py": {
+      "sha256": "07a23d58e44e6fccf9b2d9caafbcb33c5e4453b0f1512328e2c4ad03083cbb32",
+      "bytes": 5738,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/runtime/fusion.py"
+    },
+    "runtime/meralion.py": {
+      "sha256": "0891d795e7814346045e1483bfb84ac28482612ee100519f43af39ab8be9e202",
+      "bytes": 1673,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/runtime/meralion.py"
+    },
+    "runtime/ngram.py": {
+      "sha256": "b5931e265dd632f54fedf66e7c44c74381bbce33dede6704285ac39bbfb06495",
+      "bytes": 3441,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/runtime/ngram.py"
+    },
+    "runtime/postprocess.py": {
+      "sha256": "369fe617f393ff0cef562b33d98bc8b857416a2ae74a038d31f4c2808d96159e",
+      "bytes": 1355,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/runtime/postprocess.py"
+    },
+    "runtime/repetition_guard.py": {
+      "sha256": "facb95dcbb89d357a9171e38c21415fabcc20ed1c17f96dde931179d9f52154e",
+      "bytes": 825,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/runtime/repetition_guard.py"
+    },
+    "runtime/whisper.py": {
+      "sha256": "78ad6e73748329e068d561b9dda70160fdb12a5036a43de2a763f8bbc0456160",
+      "bytes": 3414,
+      "source": "/Users/aakash/Documents/Models and Research/LostinTranscription/final_9h_attack/runtime/whisper.py"
+    }
+  }
+}

@@ -1,5 +1,7 @@
 # Phase 3 protected final ASR
 
+Current last-submission candidate: `artifacts/FINAL_SUBMISSION_CONSERVATIVE.zip`, with R3-full as anchor and exact MERaLiON/R3-half support for strict substitutions only. OOF WER: 0.209778 / 0.185321 / 0.204804. The existing catastrophic repetition safeguard is retained. See [FINAL_CONSERVATIVE_REPORT.md](FINAL_CONSERVATIVE_REPORT.md) for all three variants, correction counts, and the Jember sanity check. Earlier archives are historical and unchanged.
+
 No new training. Phase 1/2 checkpoints and out-of-fold predictions are retained. Candidate A is a two-model protected fusion; Candidate B adds the already-trained full-epoch Indonesian ratio-3 Whisper as a support voter. Candidate B is recommended for Submission #2.
 
 ## Build

@@ -1,0 +1,9 @@
+# Model and code notices
+
+This package contains locally adapted OpenAI Whisper large-v3, and only the complementary models listed in config.json. Whisper large-v3 weights were obtained from the public Hugging Face checkpoint openai/whisper-large-v3, pinned revision 06f233fe06e710322aca913c1bc4249a0d71fce1, whose distribution declares Apache-2.0. APACHE_LICENSE.txt accompanies this package. The original OpenAI Whisper implementation is MIT licensed; WHISPER_LICENSE.txt preserves that license.
+
+The Whisper models were modified by Aakash through domain LoRA adaptation. Where models/large/lora_runtime.json is present, the Large-v3 public base and saved domain delta are bundled as one self-contained model folder; inference preserves the frozen BF16 training-base values and FP32 vanilla LoRA residual projections. The inference-only loader requires no PEFT package. Its arithmetic is validated against the original PEFT model before selection. Otherwise, the model uses standalone merged weights. The selected checkpoint/interpolation and decoding recipe are recorded in config.json. No endorsement by OpenAI is implied.
+
+If models/meralion is present, MERaLiON was developed by the Agency for Science Technology And Research (A*STAR), Singapore. Copyright 2026 AGENCY FOR SCIENCE TECHNOLOGY AND RESEARCH. Development of this ASR system was assisted by MERaLiON, an AI model developed by A*STAR. The full upstream public license, including the Gemma Terms of Use annex, accompanies its model files. The decoder LoRA adaptation was created by Aakash. Those upstream terms govern that model and its custom processor/model code.
+
+The independent submission entrypoint and conservative fusion modifications are copyright 2026 Aakash, provided under MIT terms in WHISPER_LICENSE.txt. Predictions are independent per clip; no test adaptation or reference-conditioned inference occurs. Models are bundled for offline use and provided without warranties.
