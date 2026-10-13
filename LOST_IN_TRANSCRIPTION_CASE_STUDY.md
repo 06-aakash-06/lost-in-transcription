@@ -703,9 +703,9 @@ Ordinary Git tracked source, recipes, reports, tests and notices. Multi-gigabyte
 | Artifact | Role |
 |---|---|
 | [Preprocessing_EDA.ipynb](Preprocessing_EDA.ipynb) | Executed consolidated preprocessing/EDA notebook |
-| [IMPLEMENTATION.md](IMPLEMENTATION.md) | Hardened v2 preparation contract |
+| [IMPLEMENTATION.md](docs/eda_and_data/IMPLEMENTATION.md) | Hardened v2 preparation contract |
 | [src/lostintranscription_preproc.py](src/lostintranscription_preproc.py) | Integrity, text/audio preparation, merging, splitting and provenance |
-| [DEV_ROUTING_DIAGNOSIS.md](DEV_ROUTING_DIAGNOSIS.md) | Metadata-blind replay and unresolved leaderboard-gap analysis |
+| [DEV_ROUTING_DIAGNOSIS.md](docs/legacy_ensemble/DEV_ROUTING_DIAGNOSIS.md) | Metadata-blind replay and unresolved leaderboard-gap analysis |
 | [phase1_whisper_anchor/](phase1_whisper_anchor/README.md) | Turbo adaptation, official scorer, folds and standalone model |
 | [phase2_meralion/](phase2_meralion/README.md) | Decoder LoRA, frozen feature cache, recovery and merge evidence |
 | [phase3_protected_fusion/](phase3_protected_fusion/README.md) | Protected fusion, tests, configs and archive builders |

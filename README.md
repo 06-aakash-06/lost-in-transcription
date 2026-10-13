@@ -36,8 +36,7 @@ ROVER. Its local conversation-disjoint dev replay was around 0.2058 WER, while
 the uploaded system scored 0.4009 on the hidden leaderboard. That gap was not
 explained by test-language metadata: metadata-blind replay was 0.2058 versus
 about 0.2062 when metadata was used. The hidden-set cause remains unknown. See
-[`DEV_ROUTING_DIAGNOSIS.md`](DEV_ROUTING_DIAGNOSIS.md) and
-[`ARCHITECTURE_HANDOFF.md`](ARCHITECTURE_HANDOFF.md).
+[`DEV_ROUTING_DIAGNOSIS.md`](docs/legacy_ensemble/DEV_ROUTING_DIAGNOSIS.md).
 
 The next work isolated a single adapted Whisper model, then measured whether
 MERaLiON could correct its errors. Simple ROVER did not make useful use of
@@ -59,10 +58,14 @@ The conversation folds are small and share only two source conversations. These
 numbers guide model selection; they do not predict hidden WER exactly. Phase
 reports include configurations, selection rules, and deployment limitations.
 
-## Work log
+## Documentation & Audit Trail
 
-[`DEVELOPMENT_LOG.md`](DEVELOPMENT_LOG.md) follows the dated repository commits
-and phase artifacts from the initial September work through Phases 1–3.
+- **Full Case Study:** [`LOST_IN_TRANSCRIPTION_CASE_STUDY.md`](LOST_IN_TRANSCRIPTION_CASE_STUDY.md) covers the complete project arc, methodology, and results.
+- **Research Paper & Presentation:** [`Indonesian_Javanese_ASR_IEEE_Paper.pdf`](output/pdf/Indonesian_Javanese_ASR_IEEE_Paper.pdf) and presentation slides in [`output/pdf/`](output/pdf/).
+- **Final 9h Attack Report:** [`FINAL_9H_REPORT.md`](FINAL_9H_REPORT.md).
+- **Model Artifact Inventory:** [`MODEL_ARTIFACTS.md`](MODEL_ARTIFACTS.md).
+- **EDA & Preprocessing Audits:** Located in [`docs/eda_and_data/`](docs/eda_and_data/) (`COMPETITION_ANALYSIS.md`, `Findings.md`, `Preprocess.md`, `IMPLEMENTATION.md`).
+- **Legacy Ensemble History:** Located in [`docs/legacy_ensemble/`](docs/legacy_ensemble/) (`DEV_ROUTING_DIAGNOSIS.md`, `ENSEMBLE_SUBMISSION.md`, `FACULTY_PIPELINE_SUMMARY.md`, [`DEVELOPMENT_LOG.md`](docs/legacy_ensemble/DEVELOPMENT_LOG.md)).
 
 ## Phase implementations
 

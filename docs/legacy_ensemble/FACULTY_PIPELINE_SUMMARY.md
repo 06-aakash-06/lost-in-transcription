@@ -201,8 +201,8 @@ weights, a ZIP-root `main.py`, and the required output schema:
 
 ### Supporting project files
 
-- [Preprocess.md](Preprocess.md) — detailed preprocessing evidence and ablations.
-- [Findings.md](Findings.md) — dataset audit and measured risks.
-- [submission_src/ensemble_config.json](submission_src/ensemble_config.json) — model routing and preprocessing profiles.
-- [submission_src/calibration.json](submission_src/calibration.json) — calibrated ensemble settings.
-- [submission_src/ensemble_runtime.py](submission_src/ensemble_runtime.py) — offline inference and consensus logic.
+- [Preprocess.md](../eda_and_data/Preprocess.md) — detailed preprocessing evidence and ablations.
+- [Findings.md](../eda_and_data/Findings.md) — dataset audit and measured risks.
+- [submission_src/ensemble_config.json](../../submission_src/ensemble_config.json) — model routing and preprocessing profiles.
+- [submission_src/calibration.json](../../submission_src/calibration.json) — calibrated ensemble settings.
+- [submission_src/ensemble_runtime.py](../../submission_src/ensemble_runtime.py) — offline inference and consensus logic.
