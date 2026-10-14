@@ -1,3 +1,12 @@
+# Core Deep Learning & Audio Processing
+torch>=2.0.0
+torchaudio>=2.0.0
+transformers>=4.40.0
+peft>=0.10.0
+accelerate>=0.28.0
+safetensors>=0.4.0
+pytest>=7.0.0
+
 anyio==4.15.0
 appnope==1.0.0
 argon2-cffi==25.1.0

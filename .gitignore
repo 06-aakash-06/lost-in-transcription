@@ -42,6 +42,14 @@ submission_timeout_fixed_candidate.zip
 
 # Local presentation build products
 tmp/
+*.aux
+*.log
+*.out
+*.synctex.gz
+**/*.aux
+**/*.log
+**/*.out
+**/*.synctex.gz
 
 # Preserved large local submission archives
 artifacts/preserved_9h_builds/*.zip

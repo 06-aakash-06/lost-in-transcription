@@ -4,6 +4,10 @@ from pathlib import Path
 from unittest.mock import patch
 import pandas as pd
 HERE=Path(__file__).resolve().parent;sys.path.insert(0,str(HERE))
+for mod in list(sys.modules.keys()):
+    if mod == 'runtime' or mod.startswith('runtime.'):
+        if not getattr(sys.modules[mod], '__file__', '').startswith(str(HERE)):
+            del sys.modules[mod]
 spec=importlib.util.spec_from_file_location('submission_entrypoint',HERE/'main.py')
 entry=importlib.util.module_from_spec(spec);spec.loader.exec_module(entry)
 from runtime.whisper import Whisper

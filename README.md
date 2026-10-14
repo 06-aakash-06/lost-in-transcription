@@ -26,6 +26,42 @@ This repository contains the complete codebase, data audit, ablation studies, an
 
 ---
 
+## 🎓 Faculty & Reviewer Quick Guide
+
+If you are a faculty advisor, collaborator, or peer reviewer evaluating this repository for publication in **Interspeech / ICASSP / CSL / IEEE TASLP**, here is your quick-start roadmap:
+
+> [!IMPORTANT]
+> **Zero-Download Immediate Testing:** You do not need to download the full 10 GB training corpus to evaluate this work. Lightweight, representative code-switched audio clips are bundled in [`samples/`](samples/) so all demos, safeguards, and pipelines execute out-of-the-box in seconds.
+
+### 1. What to Read
+- **Executive Guide & Publication Roadmap:** [`FACULTY_HANDBOOK.md`](FACULTY_HANDBOOK.md) (targets, deadlines, and reviewer checklist).
+- **Research Paper Draft (IEEE 6-Page Format):** [`output/pdf/Indonesian_Javanese_ASR_IEEE_Paper.pdf`](output/pdf/Indonesian_Javanese_ASR_IEEE_Paper.pdf).
+- **Presentation Defense Deck:** [`output/pdf/LOST_IN_TRANSCRIPTION_PRESENTATION_REVISED.pdf`](output/pdf/LOST_IN_TRANSCRIPTION_PRESENTATION_REVISED.pdf).
+
+### 2. What to Run
+- **Interactive Master Pipeline Notebook:** Open [`LostInTranscription_Pipeline.ipynb`](LostInTranscription_Pipeline.ipynb) (in JupyterLab, VS Code, or Google Colab). It includes interactive audio players, real-time transcription, repetition-safeguard demonstrations, and bootstrap significance plots. *(All outputs are pre-rendered and viewable directly on GitHub!)*
+- **15-Second CLI Demo:**
+  ```bash
+  python demo.py
+  ```
+  *(Transcribes bundled code-switched speech, runs the repetition safeguard, and displays exact WER metrics).*
+- **Reproduce Statistical Significance ($p = 1.12 \times 10^{-9}$):**
+  ```bash
+  python scripts/evaluate_significance.py
+  ```
+- **Unified Pipeline Runner:**
+  ```bash
+  python run_pipeline.py --stage smoke        # 30s dry run
+  python run_pipeline.py --stage audit        # Dataset integrity & health check
+  python run_pipeline.py --stage consensus    # Conservative hypothesis consensus
+  python run_pipeline.py --stage significance # Bootstrap 95% CIs & Wilcoxon test
+  ```
+
+> [!NOTE]
+> **Model Weights Notice:** The multi-gigabyte fine-tuned weights (`model.safetensors`, 2.9 GB) are `.gitignore`d to respect GitHub's file-size limits. For live local inference or re-training, weights can be downloaded/verified via `python scripts/download_weights.py` or transferred directly from the authors.
+
+---
+
 ## System Architecture
 
 ```
@@ -142,11 +178,15 @@ Rather than allowing an alternative model to freely overwrite the primary transc
 ```
 .
 ├── README.md                                  # You are here: paper summary & project hub
+├── FACULTY_HANDBOOK.md                        # Faculty guide & conference publication roadmap
+├── LostInTranscription_Pipeline.ipynb         # Master interactive notebook: full pipeline & evaluation
+├── Preprocessing_EDA.ipynb                    # Consolidated data audit & preprocessing notebook
+├── demo.py                                    # Interactive speech transcription demo
+├── run_pipeline.py                            # Unified CLI pipeline orchestrator
+├── requirements.txt                           # Python dependencies
 ├── LOST_IN_TRANSCRIPTION_CASE_STUDY.md        # Comprehensive 75 KB portfolio case study
 ├── FINAL_9H_REPORT.md                         # Final 9-hour attack execution & evidence log
 ├── MODEL_ARTIFACTS.md                         # Inventory of model artifacts, weights & licenses
-├── Preprocessing_EDA.ipynb                    # Consolidated, reproducible data audit notebook
-├── requirements.txt                           # Python dependencies
 │
 ├── output/pdf/                                # Research Paper & Presentations
 │   ├── Indonesian_Javanese_ASR_IEEE_Paper.pdf # Full 6-page IEEE format paper
@@ -189,23 +229,61 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 2. Run Preprocessing & Data Validation
-Execute the consolidated preprocessing pipeline:
+### 2. Interactive Master Notebook (`LostInTranscription_Pipeline.ipynb`)
+For an end-to-end interactive walkthrough with in-notebook audio playback, transcription, alignment inspection, and bootstrap significance plots:
 ```bash
-python scripts/build_preprocessing.py
-python scripts/validate_preprocessing.py
+jupyter lab LostInTranscription_Pipeline.ipynb
+# or open directly in VS Code / Cursor / Google Colab
 ```
 
-### 3. Evaluate the Final Large-v3 Research Candidate
-Run local conversation-disjoint evaluation on the target development set:
+### 3. Dataset Verification & Audit
+Check dataset presence and health via the master notebook or the pipeline CLI:
 ```bash
-python final_9h_attack/evaluate_model.py \
-  --model final_9h_attack/models/selected_large \
-  --manifest phase1_whisper_anchor/data/fold_A_valid.tsv \
-  --device mps  # or cuda / cpu
+# Verify integrity of local dataset directories and clips
+python run_pipeline.py --stage audit
+```
+*(The master notebook also embeds interactive download instructions and automated helpers in Cell 2).*
+
+### 4. Instant CLI Demo (Runs out-of-the-box in ~15s)
+Run speech transcription and Word Error Rate evaluation on the bundled sample clips:
+```bash
+# Transcribe bundled code-switched audio sample
+python demo.py
+
+# Transcribe all bundled samples (code-switched & monolingual)
+python demo.py --all-samples
+
+# Or transcribe any arbitrary audio file:
+python demo.py --audio path/to/recording.mp3
 ```
 
-### 4. Run Unit Tests
+### 5. Unified Research Pipeline (`run_pipeline.py`)
+Execute any stage of the research pipeline with a single command:
+```bash
+# 30-second end-to-end dry run verification
+python run_pipeline.py --stage smoke
+
+# Audit datasets and verify data health
+python run_pipeline.py --stage audit
+
+# Build versioned preprocessing and conversation-disjoint folds
+python run_pipeline.py --stage preprocess
+
+# Execute Conservative Hypothesis Consensus
+python run_pipeline.py --stage consensus
+
+# Compute statistical significance (Wilcoxon tests & bootstrap 95% CIs)
+python run_pipeline.py --stage significance
+```
+
+### 4. Reproduce Statistical Significance & Publication Metrics
+Verify the exact statistical significance (Wilcoxon $p = 1.12 \times 10^{-9}$) and bootstrap 95% confidence intervals reported in the paper:
+```bash
+python scripts/evaluate_significance.py
+```
+
+### 5. Run Automated Test Suites
+Run all 62 unit and integration tests across data processing, decoding safeguards, and consensus fusion:
 ```bash
 pytest tests/
 ```
